@@ -1,5 +1,4 @@
 import scrapy
-
 def isreceita(rec):
     if rec.find("/receita"):
         return True
@@ -23,7 +22,7 @@ class QuotesSpider(scrapy.Spider):
                     if nr not in receitas:
                         receitas.add("http://www.tudogostoso.com.br" + str(x))
         #print("receitas:{}".format(receitas))
-        filename = 'receitas.txt'
+        filename = 'C:/Users/Familia Sa/tutorial/tutorial/receitas.txt'
         with open(filename, 'w') as f:
             for r in receitas:
                 f.write(r + '\n')
